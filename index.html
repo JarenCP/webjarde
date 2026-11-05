@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3er ciclo de sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #100d18;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .principal {
+            background: linear-gradient(135deg, #24152f, #461b3e);
+            border: 1px solid #8b3a78;
+            padding: 25px 20px;
+            text-align: center;
+            margin: 0 auto 0;
+            max-width: 900px;
+            box-sizing: border-box;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .principal h2 {
+            margin: 0;
+            color: #f7e8ff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .fila {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #171221;
+            border: 1px solid #49304f;
+        }
+
+        .mini {
+            background: #1c1727;
+            padding: 15px 10px 20px;
+            text-align: center;
+            box-sizing: border-box;
+            min-height: 180px;
+        }
+
+        .biografia,
+        .multimedia {
+            min-width: 0;
+        }
+
+        .multimedia {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 15px 10px 20px;
+        }
+
+        .multimedia .mini {
+            min-height: 0;
+            padding: 15px 10px;
+            border: 1px solid #49304f;
+        }
+
+        .mini h3 {
+            margin: 0 0 15px;
+            font-size: 26px;
+            color: #e6a8ff;
+            font-weight: 700;
+        }
+
+        .mini audio {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .mini img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            object-fit: contain;
+            border: 1px solid #a34a91;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .foto-box {
+            background: #120f19;
+            border: 1px solid #70406f;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+            border: 1px solid #a34a91;
+            margin-top: 0;
+        }
+
+        .video-box {
+            width: 100%;
+            height: auto;
+            background: #120f19;
+            border: 1px solid #70406f;
+            margin-top: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .video-box video {
+            width: 100%;
+            max-height: 180px;
+            display: block;
+            background: #000;
+        }
+
+        .bio-texto {
+            font-size: 12px;
+            text-align: justify;
+            line-height: 1.5;
+            margin-top: 10px;
+            color: #e0d7e8;
+        }
+
+        .contacto {
+            max-width: 900px;
+            margin: 15px auto 0;
+            border: 1px solid #49304f;
+        }
+
+        .contacto p {
+            margin: 0;
+            color: #e0d7e8;
+        }
+
+        .contacto a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #f0c4ff;
+            font-weight: 700;
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 12px;
+            }
+
+            .fila {
+                grid-template-columns: 1fr;
+            }
+
+            .principal h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <h2>FÉLIX JAREN CALVACHE PARRAHA</h2>
+    </div>
+
+    <div class="fila">
+        <div class="mini">
+            <h3>Biografía</h3>
+            <img src="WhatsApp Image 2026-11-04 at 7.04.27 PM.jpeg" alt="Foto de Félix Jaren">
+            <p class="bio-texto">Mi nombre es Félix Jaren Calvache Parraha. Nací el 16 de octubre del año 2006, en la provincia de Los Ríos, cantón Babahoyo. Actualmente tengo 20 años y vivo junto a mis padres y mis dos hermanos, quienes forman parte importante de mi vida.
+
+            Me considero una persona humilde, respetuosa y de buenos sentimientos. Opino que soy una buena persona y que siempre es importante tratar a los demás con respeto y sencillez. Mi color favorito es el celeste, ya que es un color que me gusta mucho.
+
+            Una de mis principales metas es graduarme y convertirme en ingeniero en Sistemas, para poder ejercer mi profesión y construir un buen futuro. Además, tengo el sueño de postular a la Marina del Ecuador, porque quiero seguir creciendo personal y profesionalmente, servir a mi país y demostrar de lo que soy capaz.
+
+            Sé que el camino para alcanzar mis sueños no siempre será fácil, pero estoy dispuesto a esforzarme, aprender y superar cada obstáculo. Tengo claro que mi futuro depende de mis decisiones y de la dedicación que ponga en cada paso que dé. Mi mayor deseo es sentirme orgulloso de lo que logre y demostrar que, con humildad, perseverancia y determinación, los sueños pueden convertirse en realidad.</p>
+        </div>
+        <div class="multimedia">
+            <div class="mini">
+                <h3>Video</h3>
+                <div class="video-box">
+                    <video controls preload="metadata" playsinline>
+                        <source src="WhatsApp Video 2026-11-04 at 9.47.39 PM.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                </div>
+            </div>
+            <div class="mini">
+                <h3>Audio</h3>
+                <p style="margin: 8px 0 0; color: #f7e8ff; font-size: 14px; font-weight: 700;">Chao Lola</p>
+                <audio controls preload="metadata" aria-label="Reproducir Chao Lola">
+                    <source src="Chao Lola_1793841097250.mp3.mpeg" type="audio/mpeg">
+                    Tu navegador no puede reproducir audio integrado.
+                </audio>
+            </div>
+            <div class="mini">
+                <h3>Fotos</h3>
+                <div class="foto-box">
+                    <div class="galeria">
+                        <img src="WhatsApp Image 2026-11-04 at 9.51.35 PM.jpeg" alt="Foto reciente 1">
+                        <img src="WhatsApp Image 2026-11-04 at 9.51.35 PM (1).jpeg" alt="Foto reciente 2">
+                        <img src="WhatsApp Image 2026-11-04 at 9.51.35 PM (2).jpeg" alt="Foto reciente 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contacto mini" aria-labelledby="contacto-titulo">
+        <h3 id="contacto-titulo">¿Cómo me puedes encontrar?</h3>
+        <p>Puedes escribirme a mi correo electrónico:</p>
+        <a href="mailto:jarencalvache14@gmail.com">jarencalvache14@gmail.com</a>
+    </section>
+</body>
+</html>    |
